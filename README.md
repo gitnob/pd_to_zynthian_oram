@@ -30,7 +30,7 @@
 
 
 ## config.sh
-This file is specific for only one lv2 plugin. You have to adjust the specific parameters for this lv2 plugin.
+This file is specific for only one lv2 plugin. **You have to adjust the specific parameters for this lv2 plugin.**
 Most of the parameters are directly used for the hvcc command.
 At the moment only the heavylib library is included as extra parameter.
 
@@ -51,7 +51,7 @@ You can copy the directory to any specific location, for example into ~/.lv2 .
 ## test.sh
 
 This is a very system specific script which calls the plugin by its LV_URI name. A audio player is also called and some jack2 audio connections are established. 
-__You have to customize this script for your needs!__
+**You have to customize this script for your needs!**
 
 ## compiling lv2 for pd_to_zynthian (oram)
 
