@@ -50,7 +50,8 @@ You can copy the directory to any specific location, for example into ~/.lv2 .
 
 ## test.sh
 
-This is a very system specific script which calls the plugin by its LV_URI name. A audio player is also called and some jack2 audio connections are established. __You have to customize this script for your needs!__
+This is a very system specific script which calls the plugin by its LV_URI name. A audio player is also called and some jack2 audio connections are established. 
+__You have to customize this script for your needs!__
 
 ## compiling lv2 for pd_to_zynthian (oram)
 
