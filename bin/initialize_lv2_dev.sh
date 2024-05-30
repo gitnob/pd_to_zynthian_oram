@@ -24,7 +24,7 @@ CALL_PATH=$OLD_PWD
 			exit 2
 		fi
 	else 
-		if [ ${Virtual_ENV} != "$PWD/.venv" ] ; then
+		if [ "${Virtual_ENV}" != "$PWD/.venv" ] ; then
 			echo Please deactivate other virtual python environment before continue. Stopping script.
 			exit 2
 		fi
