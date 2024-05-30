@@ -21,7 +21,7 @@
 ## initialize_lv2_dev.sh
  This script creates some directories and downloads necessary repositories. Python >3.8 must be installed. 
  
- 1. A virtual python environment will be created and set.
+ 1. A virtual python environment will be created and set to active (.venv).
  2. hvcc module is installed with pip3.
  3. the following repositories are installed:
 	- https://github.com/Wasted-Audio/heavylib
@@ -50,7 +50,7 @@ You can copy the directory to any specific location, for example into ~/.lv2 .
 
 ## test.sh
 
-This is a very system specific script which calls the plugin by its LV_URI name. A audio player is also called and some jack2 audio connections are established. **You have to customize this script for your needs!**
+This is a very system specific script which calls the plugin by its LV_URI name. A audio player is also called and some jack2 audio connections are established. __You have to customize this script for your needs!__
 
 ## compiling lv2 for pd_to_zynthian (oram)
 
