@@ -1,5 +1,5 @@
 #!/bin/bash
-	source ./config.sh
+	source ./bin/config.sh
 # init:
 	cd $BASE_PATH
 

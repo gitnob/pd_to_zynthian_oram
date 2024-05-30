@@ -1,5 +1,5 @@
 #!/bin/bash
-	source ./config.sh
+	source ./bin/config.sh
 	
 	echo This is an example script for testing the lv2 plugin.
 	echo It uses jalv.gtk to open the lv2 plugin from known lv2 directories \(i.e. "~/.lv2"\).
