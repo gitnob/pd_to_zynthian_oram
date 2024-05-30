@@ -8,14 +8,15 @@
 # How to create an lv2 plugin (example)
 
  First step is to clone the repository or download the zipped files and extract it to a local directory.
- 
+ ```
  git clone https://github.com/gitnob/pd_to_zynthian_oram.git CUSTOM_DIRECTORY
  cd CUSTOM_DIRECTORY
- 
+ ```
  All commands will be called from this directory. I.e.
+ ```
  bin/initialize_lv2_dev.sh
  ...
- 
+ ```
  
 ## initialize_lv2_dev.sh
  This script creates some directories and downloads necessary repositories. Python >3.8 must be installed. 
@@ -35,9 +36,9 @@ At the moment only the heavylib library is included as extra parameter.
 
 ## compile.sh
 The script calls the following command
-
+```
 hvcc "$PDFILE" -o gen -n "$LV_NAME" -p "$HVLIB" -g dpf --copyright "$LV_COPYRIGHT" -m "$METAFILE"
-
+```
 All the arguments -o, -n, -p ... are described on the github page of hvcc:
 https://github.com/Wasted-Audio/hvcc
 
@@ -62,7 +63,9 @@ https://github.com/gitnob/pd_to_zynthian_oram.git CUSTOM_DIRECTORY
 Copy your tested puredata patch into the pd directory of the CUSTOM_DIRECTORY, set the parameters in config.sh and your good to compile your new plugin.
 
 I suggest to soft link this newly created plugin with the command:
+```
 ln -s /usr/local/src/CUSTOM_DIRECTORY/gen/bin/NAME_OF_YOUR_LV.lv2 /zynthian/zynthian-plugins/lv2/
+```
 
 After this you have to "Search For Engines" once to make your new plugin available in the long engines list.
 
