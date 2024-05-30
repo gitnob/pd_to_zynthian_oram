@@ -58,8 +58,12 @@ This is a very system specific script which calls the plugin by its LV_URI name.
 The development of the pd patch is best made on a desktop/laptop computer. You can use puredata (https://puredata.info/) or plugdata (https://plugdata.org/) for this - the later has a compiled mode, which suspends not by heavy supported puredata objects.
 Read the heavy hvcc restrictions to not get into strange behaviour (https://github.com/Wasted-Audio/hvcc/blob/develop/docs/02.getting_started.md#known-limitations, https://github.com/Wasted-Audio/hvcc/blob/develop/docs/10.unsupported_vanilla_objects.md, and the special DPF comments under https://github.com/Wasted-Audio/hvcc/blob/develop/docs/03.gen.dpf.md).
 
-After having a tested the lv2 plugin on the desktop/laptop computer, you can create a directory within Zynthian's directory structure (/usr/local/src or similar) by cloning this repository:
-https://github.com/gitnob/pd_to_zynthian_oram.git CUSTOM_DIRECTORY
+After having tested the lv2 plugin on the desktop/laptop computer, you can create a directory within Zynthian's directory structure (/usr/local/src or similar) by cloning this repository. For example like this:
+```
+git clone https://github.com/gitnob/pd_to_zynthian_oram.git /usr/local/src/CUSTOM_DIRECTORY
+cd /usr/local/src/CUSTOM_DIRECTORY
+bin/initialize.sh
+```
 
 Copy your tested puredata patch into the pd directory of the CUSTOM_DIRECTORY, set the parameters in config.sh and your good to compile your new plugin.
 
@@ -67,7 +71,8 @@ I suggest to soft link this newly created plugin with the command:
 ```
 ln -s /usr/local/src/CUSTOM_DIRECTORY/gen/bin/NAME_OF_YOUR_LV.lv2 /zynthian/zynthian-plugins/lv2/
 ```
+This makes your new lv2 plugin available for Zynthian.
 
-After this you have to "Search For Engines" once to make your new plugin available in the long engines list.
+After this you have to "Search For Engines" once to make your new plugin available in the long engines list of the webconf page.
 
 This way, if you're still developing your lv2 plugin, the changes are automatically available in zynthian.
