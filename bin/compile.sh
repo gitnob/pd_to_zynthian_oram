@@ -2,7 +2,7 @@
 #
 # check for command line arguments
 	CONFIGFILE = ./bin/config.sh
-	while getopts c flag
+	while getopts c: flag
 	do
 	    case "${flag}" in
 	        c) CONFIGFILE=${OPTARG};;
