@@ -65,7 +65,27 @@ cd /usr/local/src/CUSTOM_DIRECTORY
 bin/initialize.sh
 ```
 
-Copy your tested puredata patch into the pd directory of the CUSTOM_DIRECTORY, set the parameters in config.sh and your good to compile your new plugin.
+Copy your tested puredata patch into the pd directory of the CUSTOM_DIRECTORY.
+```
+cp -r PATH_TO_YOUR_DEVELOPMENT_PD_PLUGIN_DIRECTORY CUSTOMDIRECTORY/pd	# copies the complete pd plugin directory
+```
+You can also link to your development directory.
+```
+ln -s PATH_TO_YOUR_DEVELOPMENT_PD_PLUGIN_DIRECTORY CUSTOMDIRECTORY/pd/PLUGIN_NAME	# symbolic link to the development directory
+```
+
+Set the parameters in config.sh. Especially if you are developing several plugins in pd, an even better way is to copy the bin/config.sh file to your pd code directory, make the changes as described in the config.sh file.
+
+Compile the plugin with the help of hvcc:
+```
+bin/compile.sh	# if you are using the bin/config.sh file as a configuration file
+```
+or
+```
+bin/compile.sh CUSTOMDIRECTORY/pd/PLUGIN_NAME/config.sh 	# using bin/config.sh file in the pd directory
+```
+
+After compilation the newly created lv2 plugin can be found in CUSTOM_DIRECTORY/gen/bin/NAME_OF_YOUR_LV.lv2.
 
 I suggest to soft link this newly created plugin with the command:
 ```
