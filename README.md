@@ -62,7 +62,7 @@ After having tested the lv2 plugin on the desktop/laptop computer, you can creat
 ```
 git clone https://github.com/gitnob/pd_to_zynthian_oram.git /usr/local/src/CUSTOM_DIRECTORY
 cd /usr/local/src/CUSTOM_DIRECTORY
-bin/initialize.sh
+bin/initialize_lv2_dev.sh
 ```
 
 Copy your tested puredata patch into the pd directory of the CUSTOM_DIRECTORY.
@@ -82,7 +82,7 @@ bin/compile.sh	# if you are using the bin/config.sh file as a configuration file
 ```
 or
 ```
-bin/compile.sh CUSTOMDIRECTORY/pd/PLUGIN_NAME/config.sh 	# using bin/config.sh file in the pd directory
+bin/compile.sh -c CUSTOMDIRECTORY/pd/PLUGIN_NAME/config.sh 	# using bin/config.sh file in the pd directory
 ```
 
 After compilation the newly created lv2 plugin can be found in CUSTOM_DIRECTORY/gen/bin/NAME_OF_YOUR_LV.lv2.
