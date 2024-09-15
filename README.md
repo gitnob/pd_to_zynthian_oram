@@ -53,7 +53,7 @@ You can copy the directory to any specific location, for example into ~/.lv2 .
 This is a very system specific script which calls the plugin by its LV_URI name. A audio player is also called and some jack2 audio connections are established. 
 **You have to customize this script for your needs!**
 
-## compiling lv2 for pd_to_zynthian (oram)
+# compiling lv2 for pd_to_zynthian (oram)
 
 The development of the pd patch is best made on a desktop/laptop computer. You can use puredata (https://puredata.info/) or plugdata (https://plugdata.org/) for this - the later has a compiled mode, which suspends not by heavy supported puredata objects.
 Read the heavy hvcc restrictions to not get into strange behaviour (https://github.com/Wasted-Audio/hvcc/blob/develop/docs/02.getting_started.md#known-limitations, https://github.com/Wasted-Audio/hvcc/blob/develop/docs/10.unsupported_vanilla_objects.md, and the special DPF comments under https://github.com/Wasted-Audio/hvcc/blob/develop/docs/03.gen.dpf.md).
